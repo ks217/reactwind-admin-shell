@@ -4,6 +4,7 @@ export default function Login(props) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
+        {/* app title */}
         <div className="flex flex-row space-x-4 justify-center items-center">
           <img
             className="h-12"
@@ -14,10 +15,21 @@ export default function Login(props) {
             My App
           </h1>
         </div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0 divide-gray-300 gap-8"> </div>*/}
+        {/* sign in form */}
         <div>
-          <h2 className="mt-6 text-center text-2xl  text-gray-900">
+          <h2 className="mt-6 text-center text-2xl text-gray-900">
             Sign in to your account
           </h2>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            Or
+            <a
+              href="#create-account"
+              className="ml-1 font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Create a new account
+            </a>
+          </p>
           <form
             className="mt-8 space-y-6 text-left bg-white p-8 rounded-md shadow"
             action="#"
