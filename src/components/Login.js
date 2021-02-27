@@ -17,24 +17,11 @@ export default function Login(props) {
         </div>
         {/* <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0 divide-gray-300 gap-8"> </div>*/}
         {/* sign in form */}
-        <div>
-          <h2 className="mt-6 text-center text-2xl text-gray-900">
+        <div className="bg-white rounded-md shadow">
+          <h2 className="text-center text-xl text-gray-900 pt-6">
             Sign in to your account
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Or
-            <a
-              href="#create-account"
-              className="ml-1 font-medium text-indigo-600 hover:text-indigo-500"
-            >
-              Create a new account
-            </a>
-          </p>
-          <form
-            className="mt-8 space-y-6 text-left bg-white p-8 rounded-md shadow"
-            action="#"
-            method="POST"
-          >
+          <form className="space-y-6 text-left p-8" action="#" method="POST">
             <label className="block">
               <span className="text-gray-700">Email address</span>
               <input
@@ -109,6 +96,16 @@ export default function Login(props) {
               </button>
             </div>
           </form>
+        </div>
+        <div className="bg-white rounded-md shadow">
+          <h2 className="text-center text-xl text-gray-900 pt-6">
+            Don't have an account?
+          </h2>
+          <div className="p-8">
+            <button className="relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+              Create a new account!
+            </button>
+          </div>
         </div>
       </div>
     </div>
