@@ -62,10 +62,10 @@ export default function Login(props) {
                   Remember me
                 </label>
               </div>
-              <div class="text-sm">
+              <div className="text-sm">
                 <a
                   href="#forgot-password"
-                  class="font-medium text-indigo-600 hover:text-indigo-500"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Forgot your password?
                 </a>
