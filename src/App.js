@@ -13,9 +13,7 @@ function App() {
         <Route exact path="/dashboard">
           <div>Dashboard</div>
         </Route>
-        <Route exact path="/login">
-          <Login />
-        </Route>
+        <Route exact path="/login" component={Login}></Route>
         <Redirect exact from="/" to="/login" />
         <Route path="*">
           <div className="min-h-screen flex flex-col justify-center">
