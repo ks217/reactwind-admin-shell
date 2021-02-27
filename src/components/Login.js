@@ -14,38 +14,35 @@ export default function Login(props) {
             Sign in to your account
           </h2>
         </div>
-        <form className="mt-8 space-y-6" action="#" method="POST">
-          <input type="hidden" name="remember" value="true" />
-          <div className="rounded-md shadow-sm -space-y-px">
-            <div>
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
-              ></input>
-            </div>
-            <div>
-              <label htmlFor="password" className="sr-only">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Password"
-              />
-            </div>
-          </div>
+        <form
+          className="mt-8 space-y-6 text-left bg-white px-8 py-8 rounded-md shadow"
+          action="#"
+          method="POST"
+        >
+          <label className="block">
+            <span className="text-gray-700">Email address</span>
+            <input
+              type="email"
+              id="email-address"
+              name="email"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              placeholder="john@example.com"
+              required
+              autoComplete="email"
+            />
+          </label>
+          <label className="block">
+            <span className="text-gray-700">Password</span>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="current-password"
+              required
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+              placeholder="Password"
+            />
+          </label>
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <input
@@ -61,6 +58,15 @@ export default function Login(props) {
                 Remember me
               </label>
             </div>
+            {/* <div class="text-sm">
+              <a
+                href="#"
+                class="font-medium text-indigo-600 hover:text-indigo-500"
+              >
+                Forgot your password?
+              </a>
+            </div> */}
+            <input type="hidden" name="remember" value="true" />
           </div>
 
           <div>
@@ -85,6 +91,16 @@ export default function Login(props) {
               </span>
               Sign in
             </button>
+          </div>
+          <div>
+            <div class="text-sm">
+              <a
+                href="#forgot-password"
+                class="font-medium text-indigo-600 hover:text-indigo-500"
+              >
+                Forgot your password?
+              </a>
+            </div>
           </div>
         </form>
       </div>
