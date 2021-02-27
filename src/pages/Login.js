@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function Login(props) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.history.push('/dashboard');
+  };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -21,7 +25,7 @@ export default function Login(props) {
           <h2 className="text-center text-xl text-gray-900 pt-6">
             Sign in to your account
           </h2>
-          <form className="space-y-6 text-left p-8" action="#" method="POST">
+          <form onSubmit={handleSubmit} className="space-y-6 text-left p-8">
             <label className="block">
               <span className="text-gray-700">Email address</span>
               <input
@@ -30,7 +34,6 @@ export default function Login(props) {
                 name="email"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 placeholder="john@example.com"
-                required
                 autoComplete="email"
               />
             </label>
@@ -41,7 +44,6 @@ export default function Login(props) {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 placeholder="Password"
               />
