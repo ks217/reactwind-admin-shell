@@ -1,5 +1,6 @@
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Project from './pages/Project';
 import {
   BrowserRouter as Router,
   Route,
@@ -7,14 +8,24 @@ import {
   Switch,
   Link,
 } from 'react-router-dom';
+import Layout from './components/Layout';
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/dashboard" component={Dashboard}></Route>
-        <Route exact path="/login" component={Login}></Route>
         <Redirect exact from="/" to="/login" />
-        <Route path="*">
+        <Route exact path="/login" component={Login}></Route>
+        <Route exact path="/dashboard">
+          <Layout>
+            <Dashboard />
+          </Layout>
+        </Route>
+        <Route exact path="/projects">
+          <Layout>
+            <Project />
+          </Layout>
+        </Route>
+        <Route path="/">
           <div className="min-h-screen flex flex-col justify-center">
             <div>
               <h2 className="text-center text-xl text-gray-900">

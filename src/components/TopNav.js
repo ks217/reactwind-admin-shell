@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function TopNav() {
+const TopNav = () => {
   const [userMenu, setUserMenu] = useState(false);
   /**
    * Used to show hide user dropdown menu
@@ -96,7 +96,7 @@ export default function TopNav() {
               </svg>
             </button>
 
-            {/* <!-- Profile dropdown --> */}
+            {/* <!-- User dropdown --> */}
             <div className="ml-3 relative">
               <div>
                 <button
@@ -151,11 +151,12 @@ export default function TopNav() {
                   </a>
                 </div>
               ) : null}
-              {/* User dropdown menu ends */}
             </div>
+            {/* User dropdown menu ends */}
           </div>
         </div>
       </div>
     </nav>
   );
-}
+};
+export default TopNav;

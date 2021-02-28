@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Login(props) {
+const Login = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.history.push('/dashboard');
@@ -112,4 +112,5 @@ export default function Login(props) {
       </div>
     </div>
   );
-}
+};
+export default Login;

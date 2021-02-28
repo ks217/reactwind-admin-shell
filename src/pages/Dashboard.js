@@ -1,5 +1,5 @@
 import React from 'react';
-import TopNav from '../components/TopNav';
-export default function Dashboard() {
-  return <TopNav />;
-}
+const Dashboard = () => {
+  return <h2 className="text-left text-2xl text-gray-900">Dashboard</h2>;
+};
+export default Dashboard;
