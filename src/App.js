@@ -1,4 +1,5 @@
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,9 +11,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/dashboard">
-          <div>Dashboard</div>
-        </Route>
+        <Route exact path="/dashboard" component={Dashboard}></Route>
         <Route exact path="/login" component={Login}></Route>
         <Redirect exact from="/" to="/login" />
         <Route path="*">
