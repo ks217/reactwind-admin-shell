@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Dashboard(props) {
+  const [userMenu, setUserMenu] = useState(false);
+  /**
+   * Used to show hide user dropdown menu
+   * @param boolean show
+   */
+  const handleUserMenu = (show) => {
+    setUserMenu(show);
+  };
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -94,6 +102,8 @@ export default function Dashboard(props) {
                 <button
                   className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                   id="user-menu"
+                  onFocus={() => handleUserMenu(true)}
+                  onBlur={() => handleUserMenu(false)}
                 >
                   <span className="sr-only">Open user menu</span>
                   <img
@@ -113,6 +123,7 @@ export default function Dashboard(props) {
                 From: "transform opacity-100 scale-100"
                 To: "transform opacity-0 scale-95"
             --> */}
+              {userMenu ? (
                 <div
                   className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5"
                   role="menu"
@@ -139,6 +150,8 @@ export default function Dashboard(props) {
                     Sign out
                   </a>
                 </div>
+              ) : null}
+              {/* User dropdown menu ends */}
             </div>
           </div>
         </div>
