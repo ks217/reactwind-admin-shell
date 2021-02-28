@@ -8,7 +8,11 @@ const Layout = (props) => {
   };
   return (
     <div className="min-h-screen">
-      <TopNav header={props.header} onMenuClick={handleToggleSidebar} />
+      <TopNav
+        header={props.header}
+        forceOpenSidebar={showSidebar}
+        onMenuClick={handleToggleSidebar}
+      />
       <div className="flex flex-row min-h-full min-w-full">
         <Sidebar
           forceOpenSidebar={showSidebar}
