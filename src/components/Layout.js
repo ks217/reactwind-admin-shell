@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 const Layout = (props) => {
   return (
     <div className="min-h-screen">
-      <TopNav />
+      <TopNav header={props.header} />
       <div className="flex flex-row min-h-full">
         <Sidebar />
         <div className="maincontent sm:ml-mysidebar h-full px-8 pt-4">

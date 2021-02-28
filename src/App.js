@@ -9,6 +9,7 @@ import {
   Link,
 } from 'react-router-dom';
 import Layout from './components/Layout';
+
 function App() {
   return (
     <Router>
@@ -16,12 +17,12 @@ function App() {
         <Redirect exact from="/" to="/login" />
         <Route exact path="/login" component={Login}></Route>
         <Route exact path="/dashboard">
-          <Layout>
+          <Layout header="Dashboard">
             <Dashboard />
           </Layout>
         </Route>
         <Route exact path="/projects">
-          <Layout>
+          <Layout header="Projects">
             <Project />
           </Layout>
         </Route>

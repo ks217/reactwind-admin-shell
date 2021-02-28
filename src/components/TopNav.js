@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
-const TopNav = () => {
+// import navigationLinks from '../utils/navigationLinks';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+const TopNav = (props) => {
   const [userMenu, setUserMenu] = useState(false);
   /**
    * Used to show hide user dropdown menu
@@ -65,7 +66,7 @@ const TopNav = () => {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               <img
-                className="block lg:hidden h-8 w-auto"
+                className="hidden sm:block lg:hidden h-8 w-auto"
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                 alt="Workflow"
               />
@@ -74,6 +75,33 @@ const TopNav = () => {
                 src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                 alt="Workflow"
               />
+            </div>
+            <div className="flex-grow text-center sm:ml-6">
+              {props.header ? (
+                <span className="text-gray-300 text-white px-3 py-2 text-2xl font-medium">
+                  {props.header}
+                </span>
+              ) : (
+                ''
+              )}
+              {/* <Router>
+                <Switch>
+                  {navigationLinks.map((item, index) => {
+                    console.log(index, item.link, item.label);
+                    return (
+                      <Route
+                        key={index}
+                        path={item.link}
+                        render={() => (
+                          <span className="text-gray-300 text-white px-3 py-2 text-2xl font-medium">
+                            {item.label}
+                          </span>
+                        )}
+                      />
+                    );
+                  })}
+                </Switch>
+              </Router> */}
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
