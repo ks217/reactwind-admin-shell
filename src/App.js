@@ -8,25 +8,37 @@ import {
   Switch,
   Link,
 } from 'react-router-dom';
-import Layout from './components/Layout';
+// import Layout from './components/Layout';
+import PrivateRoute from './components/PrivateRoute';
 import React from 'react';
-
 function App() {
   return (
     <Router>
       <Switch>
         <Redirect exact from="/" to="/login" />
         <Route exact path="/login" component={Login}></Route>
-        <Route exact path="/dashboard">
-          <Layout header="Dashboard">
+        <PrivateRoute
+          exact
+          path="/dashboard"
+          component={Dashboard}
+          header="Dashboard"
+        ></PrivateRoute>
+        <PrivateRoute
+          exact
+          path="/projects"
+          component={Project}
+          header="Projects"
+        ></PrivateRoute>
+        {/* <Route exact path="/dashboard">
+          <Layout key="1" header="Dashboard">
             <Dashboard />
           </Layout>
-        </Route>
-        <Route exact path="/projects">
-          <Layout header="Projects">
+        </Route> */}
+        {/* <Route exact path="/projects">
+          <Layout key="2" header="Projects">
             <Project />
           </Layout>
-        </Route>
+        </Route> */}
         <Route path="/">
           <div className="min-h-screen flex flex-col justify-center">
             <div>
