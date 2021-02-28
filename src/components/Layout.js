@@ -10,7 +10,10 @@ const Layout = (props) => {
     <div className="min-h-screen">
       <TopNav header={props.header} onMenuClick={handleToggleSidebar} />
       <div className="flex flex-row min-h-full min-w-full">
-        <Sidebar forceSidebar={showSidebar} onLinkClick={handleToggleSidebar} />
+        <Sidebar
+          forceOpenSidebar={showSidebar}
+          toggleSidebar={handleToggleSidebar}
+        />
         <div className="maincontent sm:ml-mysidebar h-full w-full px-8 pt-4">
           {props.children}
         </div>
