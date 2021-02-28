@@ -129,21 +129,21 @@ export default function Dashboard(props) {
                   role="menu"
                 >
                   <a
-                  href="#"
+                    href="#Profile"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
                   >
                     Your Profile
                   </a>
                   <a
-                  href="#"
+                    href="#Settings"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
                   >
                     Settings
                   </a>
                   <a
-                  href="#"
+                    href="#Signout"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
                   >
