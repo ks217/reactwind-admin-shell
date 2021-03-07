@@ -28,7 +28,7 @@ function App(props) {
       <div className="fixed bottom-0 left-0 z-50">
         <button
           onClick={toggleDarkMode}
-          className="p-3 m-2 w-16 text-2xl bg-gray-900 dark:bg-blue-200 rounded-full focus:outline-none"
+          className="p-3 m-2 w-16 text-2xl bg-gray-900 dark:bg-blue-400 rounded-full focus:outline-none"
         >
           {/* {darkMode ? <span>&#x2600;</span> : <span>&#x1F319;</span>} */}
           {darkMode ? <>&#x1F31E;</> : <>&#x1F31B;</>}
