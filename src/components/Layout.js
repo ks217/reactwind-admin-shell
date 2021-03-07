@@ -7,19 +7,21 @@ const Layout = (props) => {
     setSidebar(!showSidebar);
   };
   return (
-    <div className="min-h-screen">
+    <div className="flex flex-col h-screen">
       <TopNav
         header={props.header}
         forceOpenSidebar={showSidebar}
         onMenuClick={handleToggleSidebar}
       />
-      <div className="flex flex-row min-h-full min-w-full">
-        <Sidebar
-          forceOpenSidebar={showSidebar}
-          toggleSidebar={handleToggleSidebar}
-        />
-        <div className="maincontent sm:ml-mysidebar h-full w-full px-8 pt-4">
-          {props.children}
+      <div className="flex-1">
+        <div className="flex flex-row relative h-full">
+          <Sidebar
+            forceOpenSidebar={showSidebar}
+            toggleSidebar={handleToggleSidebar}
+          />
+          <div className="maincontent sm:ml-mysidebar bg-white flex-1 h-full px-8 pt-4">
+            {props.children}
+          </div>
         </div>
       </div>
     </div>
