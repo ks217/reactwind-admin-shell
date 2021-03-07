@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+let systemDarkMode = false;
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  systemDarkMode = true;
+  document.documentElement.classList.add('dark');
+}
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App systemDarkMode={systemDarkMode} />
   </React.StrictMode>,
   document.getElementById('root')
 );
