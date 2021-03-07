@@ -17,7 +17,7 @@ export default function Sidebar(props) {
       wrapperRef.current &&
       !wrapperRef.current.contains(event.target)
     ) {
-      console.log('sidebar hide outside click');
+      // console.log('sidebar hide outside click');
       props.toggleSidebar();
     }
   };
