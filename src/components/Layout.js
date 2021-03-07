@@ -19,7 +19,7 @@ const Layout = (props) => {
             forceOpenSidebar={showSidebar}
             toggleSidebar={handleToggleSidebar}
           />
-          <div className="maincontent sm:ml-mysidebar bg-white flex-1 h-full px-8 pt-4">
+          <div className="maincontent sm:ml-mysidebar bg-white dark:bg-gray-900 dark:text-gray-300 flex-1 h-full px-8 pt-4">
             {props.children}
           </div>
         </div>

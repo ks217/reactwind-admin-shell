@@ -40,15 +40,14 @@ function App() {
           </Layout>
         </Route> */}
         <Route path="/">
-          <div className="min-h-screen flex flex-col justify-center">
-            <div>
-              <h2 className="text-center text-xl text-gray-900">
-                &#x1F6AA; Page Not Found!
-              </h2>
-              <Link to="/login">
-                <h2 className="text-center text-xl text-gray-900 mt-4">
-                  &#x1F3E1; Click here to go Home!
-                </h2>
+          <div className="min-h-screen flex flex-col justify-center text-gray-900 dark:text-gray-400 dark:bg-gray-900">
+            <div className="text-center text-xl">&#x1F6AA; Page Not Found!</div>
+            <div className="mt-4 flex justify-center">
+              <Link
+                to="/login"
+                className="p-2 rounded text-xl text-gray-100 bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-700 dark:text-gray-300"
+              >
+                &#x1F3E1; Click here to go Home
               </Link>
             </div>
           </div>
