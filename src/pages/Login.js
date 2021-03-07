@@ -6,7 +6,7 @@ const Login = (props) => {
     props.history.push('/dashboard');
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         {/* app title */}
         <div className="flex flex-row space-x-4 justify-center items-center">
@@ -21,30 +21,32 @@ const Login = (props) => {
         </div>
         {/* <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x md:divide-y-0 divide-gray-300 gap-8"> </div>*/}
         {/* sign in form */}
-        <div className="bg-white rounded-md shadow">
-          <h2 className="text-center text-xl text-gray-900 pt-6">
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow">
+          <h2 className="text-center text-xl text-gray-900 dark:text-gray-300 pt-6">
             Sign in to your account
           </h2>
           <form onSubmit={handleSubmit} className="space-y-6 text-left p-8">
             <label className="block">
-              <span className="text-gray-700">Email address</span>
+              <span className="text-gray-700 dark:text-gray-300">
+                Email address
+              </span>
               <input
                 type="email"
                 id="email-address"
                 name="email"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:border-transparent dark:bg-gray-700 dark:text-gray-100 dark:focus:border-indigo-800 dark:focus:ring-indigo-800"
                 placeholder="john@example.com"
                 autoComplete="email"
               />
             </label>
             <label className="block">
-              <span className="text-gray-700">Password</span>
+              <span className="text-gray-700 dark:text-gray-300">Password</span>
               <input
                 id="password"
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 dark:border-transparent dark:bg-gray-700 dark:text-gray-100 dark:focus:border-indigo-800 dark:focus:ring-indigo-800"
                 placeholder="Password"
               />
             </label>
@@ -54,11 +56,11 @@ const Login = (props) => {
                   id="remember_me"
                   name="remember_me"
                   type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 dark:bg-gray-800 rounded"
                 />
                 <label
                   htmlFor="remember_me"
-                  className="ml-2 block text-sm text-gray-900"
+                  className="ml-2 block text-sm text-gray-900 dark:text-gray-300"
                 >
                   Remember me
                 </label>
@@ -66,7 +68,7 @@ const Login = (props) => {
               <div className="text-sm">
                 <a
                   href="#forgot-password"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                  className="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-600"
                 >
                   Forgot your password?
                 </a>
@@ -99,8 +101,8 @@ const Login = (props) => {
             </div>
           </form>
         </div>
-        <div className="bg-white rounded-md shadow">
-          <h2 className="text-center text-xl text-gray-900 pt-6">
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow">
+          <h2 className="text-center text-xl text-gray-900 dark:text-gray-300 pt-6">
             Don't have an account?
           </h2>
           <div className="p-8">
