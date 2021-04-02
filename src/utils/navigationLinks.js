@@ -4,8 +4,8 @@ const navigationLinks = [
     link: '/dashboard',
   },
   {
-    label: 'Projects',
-    link: '/projects',
+    label: 'Events',
+    link: '/events',
   },
   {
     label: 'Calendar',

@@ -46,20 +46,10 @@ function App(props) {
           ></PrivateRoute>
           <PrivateRoute
             exact
-            path="/projects"
+            path="/events"
             component={Project}
-            header="Projects"
+            header="Events"
           ></PrivateRoute>
-          {/* <Route exact path="/dashboard">
-          <Layout key="1" header="Dashboard">
-            <Dashboard />
-          </Layout>
-        </Route> */}
-          {/* <Route exact path="/projects">
-          <Layout key="2" header="Projects">
-            <Project />
-          </Layout>
-        </Route> */}
           <Route path="/">
             <div className="min-h-screen flex flex-col justify-center text-gray-900 dark:text-gray-400 dark:bg-gray-900">
               <div className="text-center text-xl">
