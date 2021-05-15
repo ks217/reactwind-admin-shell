@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import navigationLinks from '../utils/navigationLinks';
 import useOutsideClick from './useOutsideClick';
