@@ -5,7 +5,6 @@ import useOutsideClick from './useOutsideClick';
 export default function Sidebar(props) {
   const wrapperRef = useRef();
   const onOutsideClick = () => {
-    console.log('func func');
     if (props.forceOpenSidebar) props.toggleSidebar();
   };
   const memoizedCallback = useCallback(onOutsideClick, [props]);
