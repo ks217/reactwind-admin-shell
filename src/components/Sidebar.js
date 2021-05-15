@@ -1,26 +1,16 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import navigationLinks from '../utils/navigationLinks';
+import useOutsideClick from './useOutsideClick';
 export default function Sidebar(props) {
-  const wrapperRef = useRef(null);
-
-  useEffect(() => {
-    document.addEventListener('click', handleClickOutside, false);
-    return () => {
-      document.removeEventListener('click', handleClickOutside, false);
-    };
-  });
-
-  const handleClickOutside = (event) => {
-    if (
-      props.forceOpenSidebar &&
-      wrapperRef.current &&
-      !wrapperRef.current.contains(event.target)
-    ) {
-      // console.log('sidebar hide outside click');
-      props.toggleSidebar();
-    }
+  const wrapperRef = useRef();
+  const onOutsideClick = () => {
+    console.log('func func');
+    if (props.forceOpenSidebar) props.toggleSidebar();
   };
+  const memoizedCallback = useCallback(onOutsideClick, [props]);
+  useOutsideClick(wrapperRef, memoizedCallback);
+
   return (
     <aside
       className={`absolute h-full ${
